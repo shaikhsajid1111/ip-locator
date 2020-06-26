@@ -24,7 +24,7 @@ class App extends React.Component {
   } 
 
   componentDidMount() {
-    fetch(`http://www.geoplugin.net/json.gp?ip=${this.state.query}`)
+    fetch(`https://ipapi.co/json/`)
       .then(response => response.json())
       .then(data => this.setState({ data: data }));
   }
@@ -35,7 +35,7 @@ class App extends React.Component {
     if(this.ValidateIPaddress(this.state.query)){
 
     
-    fetch(`http://www.geoplugin.net/json.gp?ip=${this.state.query}`)
+    fetch(`https://ipapi.co/${this.state.query}/json/`)
         .then(response => response.json())
         .then(data => this.setState({ data : data }));
       console.log(this.state.data)
@@ -67,20 +67,36 @@ class App extends React.Component {
           />
           <input className="submit_button" type="submit" />
         </form>
-
+      {console.log(Object.keys(this.state.data))}
 
 
         <DataTable 
         className = "data"
-          ip = {this.state.data.geoplugin_request}
-          country = {this.state.data.geoplugin_countryName}
-          continent = {this.state.data.geoplugin_continentName}
-          lat = {this.state.data.geoplugin_latitude}
-          lng = {this.state.data.geoplugin_longitude}
-          accuracy_radius = {this.state.data.geoplugin_locationAccuracyRadius}
-
+          ip = {this.state.data.ip}
+          country = {this.state.data.country_name}
+          country_code = {this.state.data.country_code}
+          continent = {this.state.data.continent_code}
+          lat = {this.state.data.latitude}
+          lng = {this.state.data.longitude}
+          accuracy_radius = {this.state.data.languages}
+          currency = {this.state.data.currency}
+          city = {this.state.data.city}
+          region = {this.state.data.region}
+          region_code = {this.state.data.region_code}
+          in_eu = {this.state.data.in_eu}
+          postal = {this.state.data.postal}
+          timezone = {this.state.data.timezone}
+          uts_offset = {this.state.data.utc_offset}
+          country_calling_code = {this.state.data.country_calling_code}
+          country_area = {this.state.data.country_area}
+          country_population = {this.state.data.country_population}
+          asn = {this.state.data.asn}
+          org = {this.state.data.org}
+          currency_name = {this.state.data.currency_name}
+          country_capital = {this.state.data.country_capital}
+          country_tld = {this.state.data.country_tld}
         />
-        
+
       </>
     )
   }

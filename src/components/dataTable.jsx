@@ -32,7 +32,7 @@ const DataTable = (props) => {
                     <tr>
                         <td>Lat,longt</td>
                         <td>
-                            <a href={`https://www.google.com/maps?q=${props.lat},${props.lng}`} target="_blank">{props.lat},{props.lng}</a>
+                            <a rel='noopener noreferrer' href={`https://www.google.com/maps?q=${props.lat},${props.lng}`} target="_blank">{props.lat},{props.lng}</a>
                         </td>
                     </tr>
                     <tr>
@@ -51,18 +51,50 @@ const DataTable = (props) => {
                     </tr>
 
                     <tr>
-                        <td>Accuray Radius</td>
+                        <td>Languages</td>
                         <td>{
                             props.accuracy_radius
                         }</td>
                     </tr>
+                    <tr>
+                        <td>Currency</td>
+                        <td>{
+                            props.currency
+                        }</td>
+                    </tr>
 
+                    <tr>
+                        <td>Currency Name</td>
+                        <td>{
+                            props.currency_name
+                        }</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Country population</td>
+                        <td>{
+                            props.country_population
+                        }</td>
+                    </tr>
 
+                    <tr>
+                        <td>Postal</td>
+                        <td>{
+                            props.postal
+                        }</td>
+                    </tr>
+
+                    <tr>
+                        <td>Timezone</td>
+                        <td>{
+                            props.timezone
+                        }</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
     )
 }
-//http://www.geoplugin.net/json.gp?ip=219.100.37.158&base_currency=EUR
+//http://www.geoplugin.net/json.gp?ip=219.100.37.158&base_currency=INR
 
 export default DataTable;
