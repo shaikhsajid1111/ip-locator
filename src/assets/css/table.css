@@ -1,31 +1,49 @@
-body{
-    margin: 0;
-    padding: 0;
- 
-}
+@import url('https://fonts.googleapis.com/css2?family=B612:wght@700&family=Carme&family=Mukta+Vaani&family=Ubuntu+Mono&family=Ubuntu:wght@300&display=swap');
 .table-container{
+    overflow-x: auto;
+}
+
+table{
+    table-layout: fixed;
+
     width: 100%;
-    border-radius: 25%;
-
-}
-table {
-    border-collapse: collapse;
-    width: 60vw;
-    border: 0.1px solid black; 
-    
-  
-}
-  
-  th, td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
     text-align: center;
+    background-color: white;
+    border-radius: 0.7em;
+    padding: 2em;
+
+    -webkit-box-shadow: -1px 3px 14px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 3px 14px 1px rgba(0,0,0,0.75);
+    box-shadow: -1px 3px 14px 1px rgba(0,0,0,0.75);
+    border-collapse: collapse;
 }
-tr:nth-child(even){
-    background-color: #fdfcfa;
+thead{
+    font-family: 'Ubuntu', sans-serif;    
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+td{
+    word-wrap: break-word;
+    padding: 0.8em;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+    border-bottom: 0.2px solid black;
+    border-right: 0.2px solid black;    
+    width: 25%;
 }
 
+a{
+    text-decoration: none;
+}
+td:hover{
+    background-color: whitesmoke;
+    opacity: .7;
   
-  tr:hover {background-color:#f5f5f5;}
-  
+}
+/*
+font-family: 'B612', sans-serif;
+font-family: 'Carme', sans-serif;
+font-family: 'Mukta Vaani', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Ubuntu Mono', monospace;
+*/

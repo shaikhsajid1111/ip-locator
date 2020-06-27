@@ -65,14 +65,14 @@ class App extends React.Component {
             onChange={this.queryUpdate}
             required
           />
-          <input className="submit_button" type="submit" />
+          <input className="submit_button" type="submit" value="Search" />
         </form>
-      {console.log(Object.keys(this.state.data))}
-
+      {/*console.log(Object.keys(this.state.data))*/}
+    <h2 className="IP">IP address detected : {this.state.data.ip}</h2>
 
         <DataTable 
         className = "data"
-          ip = {this.state.data.ip}
+          
           country = {this.state.data.country_name}
           country_code = {this.state.data.country_code}
           continent = {this.state.data.continent_code}

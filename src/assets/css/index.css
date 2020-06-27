@@ -1,21 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=B612:wght@700&family=Carme&family=Mukta+Vaani&family=Ubuntu+Mono&family=Ubuntu:wght@300&display=swap');
+
 body{
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    background-image: linear-gradient(to right top, #1e3939, #105c4f, #227f55, #55a14c, #97c036);
+
 }
 
 .ip_address_input{
     padding: 0.8em;
     margin: 4em 0 4em 0 ;
+    -webkit-box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
+box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
+    border-radius: .7em;
+    text-align: center;
+    outline: none;
+    font-family: 'Carme', sans-serif;
 }
 
 .submit_button{
     padding: 0.8em;
+    border-radius: 0.7em;
+    -webkit-box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
+    box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
+    font-family: 'Carme', sans-serif;
+    cursor: pointer;
+    
+}
+.submit_button:hover{
+    background-color: green;
+    
 }
 form{
     text-align: center;
+}
+.IP{
+    text-align: center;
+    font-family: 'Mukta Vaani', sans-serif;
 }

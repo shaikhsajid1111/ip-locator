@@ -4,7 +4,7 @@ import '../assets/css/table.css';
 const DataTable = (props) => {
     return (
         <div className="table-container">
-            <table>
+            <table className="table table-hover table-responsive-md text-center">
                 <thead>
                     <tr>
                         <td>Title</td>
@@ -13,37 +13,7 @@ const DataTable = (props) => {
                 </thead>
 
                 <tbody>
-                    <tr>
-                        <td>IP</td>
-                        <td>{
-                            props.ip
-                        }</td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            Country
-                        </td>
-                        <td> {
-                            props.country
-                        } </td>
-
-                    </tr>
-                    <tr>
-                        <td>Lat,longt</td>
-                        <td>
-                            <a rel='noopener noreferrer' href={`https://www.google.com/maps?q=${props.lat},${props.lng}`} target="_blank">{props.lat},{props.lng}</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>City</td>
-                        <td>{
-                            props.city
-                        }</td>
-                    </tr>
-
-                
-                    <tr>
+                <tr>
                         <td>Continent</td>
                         <td>{
                             props.continent
@@ -51,9 +21,63 @@ const DataTable = (props) => {
                     </tr>
 
                     <tr>
+                        <td>
+                            Country
+                        </td>
+                        <td>{props.country_code} | {
+                            props.country
+                        } </td>
+
+                    </tr>
+                    <tr>
+                        <td>State </td>
+                        <td> {props.region_code} | {
+                            props.region
+                        } </td>
+                    </tr>
+
+                  
+
+                    <tr>
+                        <td>City</td>
+                        <td>{
+                            props.city
+                        }</td>
+                    </tr>
+                    <tr>
+                        <td>Postal</td>
+                        <td>{
+                            props.postal
+                        }</td>
+                    </tr>
+                    <tr>
+                        <td>Lat,longt</td>
+                        <td>
+                            <a rel='noopener noreferrer' href={`https://www.google.com/maps?q=${props.lat},${props.lng}`} target="_blank">{props.lat},{props.lng}</a>
+                        </td>
+                    </tr>
+                   
+
+                
+                   
+
+                    <tr>
                         <td>Languages</td>
                         <td>{
                             props.accuracy_radius
+                        }</td>
+                    </tr>
+                    <tr>
+                        <td>Timezone</td>
+                        <td>{
+                            props.timezone
+                        }</td>
+                    </tr>
+
+                    <tr>
+                        <td>UTS Offset</td>
+                        <td>{
+                            props.uts_offset
                         }</td>
                     </tr>
                     <tr>
@@ -77,24 +101,51 @@ const DataTable = (props) => {
                         }</td>
                     </tr>
 
+                    
+
+                  
+
                     <tr>
-                        <td>Postal</td>
+                        <td>Country Calling Code</td>
                         <td>{
-                            props.postal
+                            props.country_calling_code
                         }</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Country Area</td>
+                        <td>{
+                            props.country_area} Kms</td>
                     </tr>
 
                     <tr>
-                        <td>Timezone</td>
+                        <td>Country Population</td>
                         <td>{
-                            props.timezone
+                            props.country_population
                         }</td>
                     </tr>
+                    
+                    <tr>
+                        <td>Autonomous System Number (ASN)</td>
+                        <td>{
+                            props.asn
+                        }</td>
+                    </tr>
+                    <tr>
+                        <td>European Union </td>
+                        <td>{props.in_eu == "" ? "False" : "True"} </td>
+                    </tr>
+                    <tr>
+                        <td>Organization</td>
+                        <td>{props.org} </td>
+                    </tr>
+                   
+
                 </tbody>
             </table>
         </div>
     )
 }
-//http://www.geoplugin.net/json.gp?ip=219.100.37.158&base_currency=INR
+
 
 export default DataTable;
