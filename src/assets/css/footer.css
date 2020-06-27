@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=B612:wght@700&family=Carme&family=Mukta+Vaani&family=Ubuntu+Mono&family=Ubuntu:wght@300&display=swap');
+
+.footer-container{
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;    
+}
+.heart{
+    color: red;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+/*
+font-family: 'B612', sans-serif;
+font-family: 'Carme', sans-serif;
+font-family: 'Mukta Vaani', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Ubuntu Mono', monospace;
+*/

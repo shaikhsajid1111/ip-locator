@@ -7,20 +7,20 @@ body{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background-image: linear-gradient(to right top, #1e3939, #105c4f, #227f55, #55a14c, #97c036);
-
+    background-color: #36454f;
 }
 
 .ip_address_input{
     padding: 0.8em;
     margin: 4em 0 4em 0 ;
     -webkit-box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
--moz-box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
-box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
+    box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
     border-radius: .7em;
     text-align: center;
     outline: none;
     font-family: 'Carme', sans-serif;
+    position: sticky;
 }
 
 .submit_button{
@@ -31,10 +31,14 @@ box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
     box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
     font-family: 'Carme', sans-serif;
     cursor: pointer;
+    position: sticky;
+    outline: none;
     
 }
 .submit_button:hover{
-    background-color: green;
+    background-color: black;
+    color: white;
+    outline: none;
     
 }
 form{
@@ -43,4 +47,5 @@ form{
 .IP{
     text-align: center;
     font-family: 'Mukta Vaani', sans-serif;
+    color: white;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import DataTable from './components/dataTable'
+import Footer from './components/footer';
 import './assets/css/index.css';
 class App extends React.Component {
   constructor(props) {
@@ -63,12 +64,13 @@ class App extends React.Component {
             placeholder="Enter IP address"
             className = "ip_address_input"
             onChange={this.queryUpdate}
+            title = "Enter IP address"
             required
           />
           <input className="submit_button" type="submit" value="Search" />
         </form>
       {/*console.log(Object.keys(this.state.data))*/}
-    <h2 className="IP">IP address detected : {this.state.data.ip}</h2>
+    <h2 className="IP">Detected : {this.state.data.ip}</h2>
 
         <DataTable 
         className = "data"
@@ -97,6 +99,7 @@ class App extends React.Component {
           country_tld = {this.state.data.country_tld}
         />
 
+      <Footer/>
       </>
     )
   }

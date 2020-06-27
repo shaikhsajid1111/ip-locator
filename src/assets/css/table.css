@@ -11,16 +11,21 @@ table{
     background-color: white;
     border-radius: 0.7em;
     padding: 2em;
-
-    -webkit-box-shadow: -1px 3px 14px 1px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 3px 14px 1px rgba(0,0,0,0.75);
     box-shadow: -1px 3px 14px 1px rgba(0,0,0,0.75);
     border-collapse: collapse;
+    border: 5px solid white;
 }
 thead{
     font-family: 'Ubuntu', sans-serif;    
     text-transform: uppercase;
     font-weight: bolder;
+    background-color: black;
+    color: white;
+    
+}
+thead td:hover{
+    background-color: white;
+    color: black;
 }
 td{
     word-wrap: break-word;
@@ -32,14 +37,16 @@ td{
     width: 25%;
 }
 
-a{
+table a{
     text-decoration: none;
+    color: black;
 }
-td:hover{
-    background-color: whitesmoke;
-    opacity: .7;
-  
+
+td:hover,td:hover > a {
+    background-color: black;
+    color:white;
 }
+
 /*
 font-family: 'B612', sans-serif;
 font-family: 'Carme', sans-serif;
