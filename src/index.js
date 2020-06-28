@@ -47,7 +47,7 @@ class App extends React.Component {
   }
   queryUpdate(eve) {
     this.setState({
-      query: eve.target.value
+      query: eve.target.value.replace(/^\s+|\s+$/g, "")
     })
   }
 
@@ -60,7 +60,7 @@ class App extends React.Component {
       <>
         <form onSubmit={this.submitHandle}>
           <input
-            type="text"
+            type="search"
             placeholder="Enter IP address"
             className = "ip_address_input"
             onChange={this.queryUpdate}

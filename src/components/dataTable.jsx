@@ -2,9 +2,14 @@ import React from 'react';
 import '../assets/css/table.css';
 /* eslint eqeqeq: 0 */
 const DataTable = (props) => {
+    const contienentName = {'AS' : 'Asia','NA' : "North America",
+                            'AF' : "Africa","EU" : "Europe",
+                            "SA" : "South America",'AQ' : "Antarctica",
+                            "OC" : "Australia/Oceania"
+}
     return (
         <div className="table-container">
-            <table className="table table-hover table-responsive-md text-center">
+            <table>
                 <thead>
                     <tr>
                         <td>Title</td>
@@ -16,7 +21,7 @@ const DataTable = (props) => {
                 <tr>
                         <td>Continent</td>
                         <td>{
-                            props.continent
+                            contienentName[props.continent]
                         }</td>
                     </tr>
 
@@ -134,7 +139,7 @@ const DataTable = (props) => {
                     <tr>
                         <td>European Union </td>
                         
-                        <td>{props.in_eu == "" ? "False" : "True"} </td>
+                        <td>{props.in_eu == "" ? "No" : "Yes"} </td>
                     </tr>
                     <tr>
                         <td>Organization</td>

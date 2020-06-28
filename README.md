@@ -11,7 +11,7 @@
 
 ## Installation
 
-1. Install dependecies with ```npm install```
+1. Install dependencies with ```npm install```
 1. In the project's directory run the app with ```npm start```<br />
    Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
