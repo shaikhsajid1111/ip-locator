@@ -1,27 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=B612:wght@700&family=Carme&family=Mukta+Vaani&family=Ubuntu+Mono&family=Ubuntu:wght@300&display=swap');
 .table-container{
     overflow-x: auto;
+    
 }
 
 table{
     table-layout: fixed;
-
+    
     width: 100%;
     text-align: center;
-    background-color: white;
-    border-radius: 0.7em;
+    background-color: transparent;
+    
     padding: 2em;
-    box-shadow: -1px 3px 14px 1px rgba(0,0,0,0.75);
     border-collapse: collapse;
-    border: 5px solid white;
+  
+    background-color: white;
+    max-width: 80%;
+    position: sticky;
+    left: 10%;
+    text-align: left;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.38);
+    
+  
 }
 thead{
     font-family: 'Ubuntu', sans-serif;    
     text-transform: uppercase;
     font-weight: bolder;
-    background-color: black;
+    background-color: #667eea;
     color: white;
+
     
+}
+tr:last-of-type{
+    border-bottom: 3px solid #667eea;
 }
 thead td:hover{
     background-color: white;
@@ -29,21 +41,22 @@ thead td:hover{
 }
 td{
     word-wrap: break-word;
-    padding: 0.8em;
+    padding: 12px 15px;;
     font-family: 'Ubuntu', sans-serif;
     font-weight: bolder;
-    border-bottom: 0.2px solid black;
-    border-right: 0.2px solid black;    
     width: 25%;
+    transition: all 0.4s;
 }
-
+tr:nth-child(even){
+    background-color: #F8F8FF;
+}
 table a{
     text-decoration: none;
     color: black;
 }
 
 td:hover,td:hover > a {
-    background-color: black;
+    background-color: #667eea;
     color:white;
 }
 

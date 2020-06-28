@@ -7,36 +7,39 @@ body{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: #36454f;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    
 }
 
 .ip_address_input{
-    padding: 0.8em;
-    margin: 4em 0 4em 0 ;
-    -webkit-box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
-    box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
+    padding: 1em;
+    margin: 5em 0 4em 0 ;
+   
     border-radius: .7em;
     text-align: center;
     outline: none;
+    border: none;
     font-family: 'Carme', sans-serif;
     position: sticky;
+    margin-right: 0.4em;
+    transition: all 0.7s;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.38);
 }
 
 .submit_button{
-    padding: 0.8em;
+    padding: 1em;
     border-radius: 0.7em;
-    -webkit-box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
-    box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.38);
     font-family: 'Carme', sans-serif;
     cursor: pointer;
     position: sticky;
     outline: none;
+    border: none;
+    transition: all 0.5s;
     
 }
 .submit_button:hover{
-    background-color: black;
+    background-color: transparent;
     color: white;
     outline: none;
     
@@ -48,4 +51,10 @@ form{
     text-align: center;
     font-family: 'Mukta Vaani', sans-serif;
     color: white;
+    font-size: 2.1em;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.IP:hover{
+    color: black;
 }

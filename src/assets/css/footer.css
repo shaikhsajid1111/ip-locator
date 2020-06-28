@@ -3,7 +3,7 @@
 .footer-container{
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
-    color: white;    
+    font-weight: bolder;
 }
 .heart{
     color: red;

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../assets/css/table.css';
-
+/* eslint eqeqeq: 0 */
 const DataTable = (props) => {
     return (
         <div className="table-container">
@@ -133,6 +133,7 @@ const DataTable = (props) => {
                     </tr>
                     <tr>
                         <td>European Union </td>
+                        
                         <td>{props.in_eu == "" ? "False" : "True"} </td>
                     </tr>
                     <tr>
