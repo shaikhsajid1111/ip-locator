@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+.navbar{
+    background-color: white;
+    padding: 1em;
+    font-family: 'Righteous', cursive;    
+    box-shadow: 0px 0px 20px rgb(0, 0, 0.38);
+}
+.navbar::-moz-selection{
+    color: white;
+    background-color: black;
+}
+.navbar::selection{
+    color: white;
+    background-color: black;
+}
+.company-logo{
+    width: 4vw;
+    height: 3vh;
+    margin: 0;
+    padding: 0;
+}

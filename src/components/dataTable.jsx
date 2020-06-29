@@ -13,7 +13,7 @@ const DataTable = (props) => {
             <table>
                 <thead>
                     <tr>
-                        <td>Title</td>
+                        <td>Attributes</td>
                         <td>Data</td>
                     </tr>
                 </thead>
@@ -51,13 +51,13 @@ const DataTable = (props) => {
                         }</td>
                     </tr>
                     <tr>
-                        <td>Postal</td>
+                        <td>Postal Code</td>
                         <td>{
                             props.postal
                         }</td>
                     </tr>
                     <tr>
-                        <td>Lat,longt</td>
+                        <td>Latitude,Longitude</td>
                         <td>
                             <a rel='noopener noreferrer' href={`https://www.google.com/maps?q=${props.lat},${props.lng}`} target="_blank">{props.lat},{props.lng}</a>
                         </td>
@@ -70,7 +70,7 @@ const DataTable = (props) => {
                     <tr>
                         <td>Languages</td>
                         <td>{
-                            props.accuracy_radius
+                            props.languages
                         }</td>
                     </tr>
                     <tr>
@@ -81,7 +81,7 @@ const DataTable = (props) => {
                     </tr>
 
                     <tr>
-                        <td>UTS Offset</td>
+                        <td>UTC Offset</td>
                         <td>{
                             props.uts_offset
                         }</td>

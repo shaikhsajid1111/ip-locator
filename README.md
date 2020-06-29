@@ -1,6 +1,6 @@
-# ![ICON](public/favicon.ico)  IP Tracker
+# IP Tracker
 
-> Quickly find detail about any IP
+> Quickly find detail about any IP Address
 
 [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com/)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](hhttps://github.com/shaikhsajid1111/weather/graphs/commit-activity)

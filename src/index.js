@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import Header from './components/header';
 import DataTable from './components/dataTable'
 import Footer from './components/footer';
 import './assets/css/index.css';
@@ -73,7 +74,7 @@ class App extends React.Component {
     return (
       
       <>
-     
+      <Header />
         <form onSubmit={this.submitHandle}>
           <input
             type="search"
@@ -96,7 +97,7 @@ class App extends React.Component {
           continent = {this.state.data.continent_code}
           lat = {this.state.data.latitude}
           lng = {this.state.data.longitude}
-          accuracy_radius = {this.state.data.languages}
+          languages = {this.state.data.languages}
           currency = {this.state.data.currency}
           city = {this.state.data.city}
           region = {this.state.data.region}
