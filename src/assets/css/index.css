@@ -20,6 +20,7 @@ body{
     outline: none;
     border: none;
     font-family: 'Carme', sans-serif;
+    position: -webkit-sticky;
     position: sticky;
     margin-right: 0.4em;
     transition: all 0.7s;
@@ -32,6 +33,7 @@ body{
     box-shadow: 0px 0px 20px rgba(0,0,0,0.38);
     font-family: 'Carme', sans-serif;
     cursor: pointer;
+    position: -webkit-sticky;
     position: sticky;
     outline: none;
     border: none;
@@ -57,4 +59,10 @@ form{
 }
 .IP:hover{
     color: black;
+}
+.IP::-moz-selection{
+    background-color: white;
+}
+.IP::selection{
+    background-color: white;
 }

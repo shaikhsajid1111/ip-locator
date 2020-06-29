@@ -2,6 +2,7 @@ import React from 'react';
 import '../assets/css/table.css';
 /* eslint eqeqeq: 0 */
 const DataTable = (props) => {
+    /*to replace abbreviation with fullname*/ 
     const contienentName = {'AS' : 'Asia','NA' : "North America",
                             'AF' : "Africa","EU" : "Europe",
                             "SA" : "South America",'AQ' : "Antarctica",

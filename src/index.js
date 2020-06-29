@@ -3,19 +3,21 @@ import ReactDom from 'react-dom';
 import DataTable from './components/dataTable'
 import Footer from './components/footer';
 import './assets/css/index.css';
+
+/*main app component*/ 
 class App extends React.Component {
   constructor(props) {
     super(props);
-
+    /*state of the component*/ 
     this.state = {
-      data: {},
-      query: 'xx.xx.xx.xx'
+      data: {},         /**to store data from API fetch */
+      query: ''       /**to store query */
     };
     this.submitHandle = this.submitHandle.bind(this);
     this.queryUpdate = this.queryUpdate.bind(this)
   }
   
-  
+  /**to check if the input IP address is valid IP address */
   ValidateIPaddress(ipaddress) {  
     if (/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(ipaddress)) {  
       return (true);  
@@ -23,22 +25,34 @@ class App extends React.Component {
     return (false);
       
   } 
-
+  /*detect user by default IP adrress*/ 
   componentDidMount() {
+    /*fetch data about the user's IP address*/ 
     fetch(`https://ipapi.co/json/`)
       .then(response => response.json())
-      .then(data => this.setState({ data: data }));
-  }
+      .then(data => {
+        /**set the state with that data */
+        this.setState({ data : data })
+      },(error) => {
+        /**if error occurs */
+        console.log(error)
+      })
+  
+    }
 
   submitHandle(event) {
-    //alert(`Value is ${this.state.query}`)
-    event.preventDefault() 
+  
+    event.preventDefault()      /**stop refreshing onSubmit */ 
     if(this.ValidateIPaddress(this.state.query)){
 
     
-    fetch(`https://ipapi.co/${this.state.query}/json/`)
+      fetch(`https://ipapi.co/${this.state.query}/json/`)
         .then(response => response.json())
-        .then(data => this.setState({ data : data }));
+        .then(data => {
+          this.setState({data : data})
+        },(error) =>{
+          console.log(error)
+        });
       console.log(this.state.data)
     }
     else{
@@ -47,7 +61,8 @@ class App extends React.Component {
   }
   queryUpdate(eve) {
     this.setState({
-      query: eve.target.value.replace(/^\s+|\s+$/g, "")
+      
+      query: eve.target.value.replace(/^\s+|\s+$/g, "")/**replace extra spaces from the string */
     })
   }
 
@@ -58,6 +73,7 @@ class App extends React.Component {
     return (
       
       <>
+     
         <form onSubmit={this.submitHandle}>
           <input
             type="search"
@@ -69,7 +85,7 @@ class App extends React.Component {
           />
           <input className="submit_button" type="submit" value="Search" />
         </form>
-      {/*console.log(Object.keys(this.state.data))*/}
+    
     <h2 className="IP">Detected : {this.state.data.ip}</h2>
 
         <DataTable 

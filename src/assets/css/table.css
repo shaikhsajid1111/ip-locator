@@ -16,6 +16,7 @@ table{
   
     background-color: white;
     max-width: 80%;
+    position: -webkit-sticky;
     position: sticky;
     left: 10%;
     text-align: left;
@@ -59,7 +60,14 @@ td:hover,td:hover > a {
     background-color: #667eea;
     color:white;
 }
-
+td::-moz-selection{
+    color: white;
+    background-color: black;
+}
+td::selection{
+    color: white;
+    background-color: black;
+}
 /*
 font-family: 'B612', sans-serif;
 font-family: 'Carme', sans-serif;

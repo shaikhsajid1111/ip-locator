@@ -5,9 +5,11 @@
     font-family: 'Ubuntu', sans-serif;
     font-weight: bolder;
 }
+/*color of heart icon*/
 .heart{
     color: red;
 }
+/*all hyperlinks to stay white foreground color and text decoration with none*/
 a{
     text-decoration: none;
     color: white;

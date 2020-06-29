@@ -1,4 +1,4 @@
-#   IP Tracker
+# ![ICON](public/favicon.ico)  IP Tracker
 
 > Quickly find detail about any IP
 
@@ -19,6 +19,13 @@
 ## Tech
 - [React](https://reactjs.org)
 - [IPAPI](https://ipapi.co)
+
+
+
+## Screenshot
+
+![Screenshot](screenshot/screenshot.png)
+
 
 ## LICENSE
 
